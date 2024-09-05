@@ -105,7 +105,8 @@ export const Contact = () => {
                 <TitleText size="s" color="white">Telefones:</TitleText>
                 <TextRegular color="white">
                 <strong>Macaé:</strong>{' '} 
-                <a href="tel:+55222762-2717">(22) 2762-2717</a>
+                <a href="tel:+55223518-0094">(22) 3518-0094</a> | {' '} 
+                <a href="tel:+552299774-0161">(22) 99774-0161</a>
                 </TextRegular>
               </div>
             </ContentEmailAndWhatsapp>
@@ -132,9 +133,7 @@ export const Contact = () => {
               </div>
             </ContentEmailAndWhatsapp>
 
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3688.9280305733837!2d-41.791317825420236!3d-22.394070419747123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96305e7fb8f765%3A0xfaba4f7ab425e1bb!2sCentral%20de%20A%C3%A7os!5e0!3m2!1spt-BR!2sbr!4v1724204897163!5m2!1spt-BR!2sbr" id="Maps" loading="lazy"></iframe>
-
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14761.200920487832!2d-41.7800668!3d-22.3422898!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9631034350483d%3A0x70cb7e0d8599d035!2sGaspar%20Transportes!5e0!3m2!1spt-BR!2sbr!4v1725533352573!5m2!1spt-BR!2sbr" width="600" height="450"  loading="lazy" id="Maps" ></iframe>
           </ContainerEmailAndWhatsapp>
 
           <ContentForm onSubmit={handleSubmit(handleSendEmail)}>
