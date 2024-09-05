@@ -47,7 +47,7 @@ export const ImgBanner = styled.img`
 `;
 
 export const ContentText = styled.div`
-  width: 50%;
+  width: 65%;
 
   display: flex;
   flex-direction: column;
@@ -56,7 +56,7 @@ export const ContentText = styled.div`
   gap: 1rem;
 
   position: absolute;
-  top: 40%;
+  top: 35%;
   left: 6%;
   z-index: 1;
 

@@ -26,6 +26,10 @@ export const ContainerSectionServices = styled.section`
 
   @media (max-width: 768px) {
    flex-direction: column;
+
+   .mySwiper {
+    width: 100%;
+  }
   }
 `;
 

@@ -1,7 +1,7 @@
 // Images
 import { useEffect } from 'react'
 import ImgABoutOne from '../../../../assets/ImgAbout.jpeg'
-import ImgABoutTwo from '../../../../assets/ImgAbout1.jpg'
+import ImgABoutTwo from '../../../../assets/ImgAbout3.jpeg'
 
 // Components
 import { Button, TextRegular, TitleText } from "../../../../components"
