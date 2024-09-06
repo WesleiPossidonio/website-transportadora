@@ -118,6 +118,10 @@ left: 9.1rem;
 }
 
 @media (max-width: 600px) {
+  left: 8rem;
+}
+
+@media (max-width: 374px) {
   left: 6rem;
 }
 `
