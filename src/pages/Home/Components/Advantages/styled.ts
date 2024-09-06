@@ -86,6 +86,14 @@ export const AdvantageBox = styled.div`
   
   }
 
+  img {
+    width: 4rem;
+  }
+
+  #securityIcon {
+    width: 4.6rem;
+  }
+
   @keyframes moveY {
   0% {
     transform: translateY(0);

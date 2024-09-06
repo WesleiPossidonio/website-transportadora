@@ -16,7 +16,7 @@ export const ContainerSectionServices = styled.section`
 
   .mySwiper {
     width: 70%;
-    height: 23rem;
+    height: 19rem;
     margin: 4.125rem;
   }
 
@@ -65,7 +65,6 @@ export const CardSwiper = styled(SwiperSlide)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
 
   padding: 1.5rem;
   border: none;
@@ -79,10 +78,6 @@ export const CardSwiper = styled(SwiperSlide)`
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   background: ${({ theme }) => theme.colors["base-white"]};
 
-  h1, p, a {
-    align-self: flex-start;
-    text-align: start;
-  }
 
   &:hover {
     background-color: ${({ theme }) => theme.colors["base-secundary-bg"]};
@@ -98,8 +93,7 @@ export const CardSwiper = styled(SwiperSlide)`
 `;
 
 export const Icon = styled.img`
-  width: 4rem;
-  align-self: flex-start;
+  width: 6rem;
   color: red;
 `;
 

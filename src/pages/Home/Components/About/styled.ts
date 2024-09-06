@@ -42,6 +42,13 @@ export const ContentImageOne = styled.div`
   width: 14rem;
   position: relative;
 
+  @media (max-width: 600px) {
+    width: 13rem;
+  }
+
+  @media (max-width: 374px) {
+    width: 11rem;
+  }
 `
 
 export const LineImg = styled.span`
@@ -67,11 +74,27 @@ export const ImgAbout = styled.img`
   @media (max-width: 768px) {
     height: 19rem;
   }
+
+  @media (max-width: 600px) {
+    width: 13rem ;
+  }
+
+  @media (max-width: 374px) {
+    width: 11rem;
+  }
 `;
 
 export const ContentImageTwo = styled.div`
   width: 14rem;
   position: relative;
+
+  @media (max-width: 600px) {
+    width: 13rem;
+  }
+
+  @media (max-width: 374px) {
+    width: 11rem;
+  }
 `
 
 export const LineImgBotton = styled(LineImg)`
@@ -88,7 +111,15 @@ left: 9.1rem;
 
 @media (max-width: 768px) {
   top: 10.2rem;
-  }
+}
+
+@media (max-width: 600px) {
+  left: 8rem;
+}
+
+@media (max-width: 600px) {
+  left: 6rem;
+}
 `
 
 export const ImgAboutBotton = styled.img`
@@ -98,6 +129,14 @@ export const ImgAboutBotton = styled.img`
 
   @media (max-width: 768px) {
     height: 19rem;
+  }
+
+  @media (max-width: 600px) {
+    width: 13rem;
+  }
+
+  @media (max-width: 374px) {
+    width: 11rem;
   }
 `;
 

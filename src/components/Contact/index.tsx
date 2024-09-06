@@ -104,9 +104,9 @@ export const Contact = () => {
               <div>
                 <TitleText size="s" color="white">Telefones:</TitleText>
                 <TextRegular color="white">
-                <strong>Macaé:</strong>{' '} 
-                <a href="tel:+55223518-0094">(22) 3518-0094</a> | {' '} 
-                <a href="tel:+552299774-0161">(22) 99774-0161</a>
+                  <strong>Macaé:</strong>{' '} 
+                  <a href="tel:+55223518-0094">(22) 3518-0094</a> | {' '} 
+                  <a href="tel:+552299774-0161">(22) 99774-0161</a>
                 </TextRegular>
               </div>
             </ContentEmailAndWhatsapp>
@@ -116,8 +116,8 @@ export const Contact = () => {
               <div>
                 <TitleText size="s" color="white">E-mail</TitleText>
                 <TextRegular color="white"><strong>Macaé:</strong>{' '}
-                  <a href="mailto:vendas@centraldeacos.com.br">
-                    vendas@centraldeacos.com.br
+                  <a href="mailto:atendimentos@ganail.com">
+                    atendimentos@ganail.com
                   </a>
                 </TextRegular>
               </div>
@@ -128,7 +128,7 @@ export const Contact = () => {
               <div>
                 <TitleText size="s" color="white">Endereços</TitleText>
                 <TextRegular color="white" weight={500}>
-                  <a href="#"> R. Evaldo Costa, 1103 - Sol Y Mar, Macaé - RJ </a>
+                  <a href="#"> Granja dos Cavaleiros, Macaé - RJ, Cep: 27930-480 </a>
                 </TextRegular>
               </div>
             </ContentEmailAndWhatsapp>

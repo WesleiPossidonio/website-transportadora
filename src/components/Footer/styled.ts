@@ -52,7 +52,7 @@ export const ContentLogo = styled.div`
       }
 
   @media (max-width: 696px) {
-    order: 3;
+    order: 1;
     margin-top: 1.5rem;
   }
 `;
@@ -66,7 +66,7 @@ justify-content: center;
 
 export const ContentContact = styled(ContentLogo)`
   @media (max-width: 696px) {
-    order: 2;
+    order: 3;
     margin-top: 0;
     div {
       width: 100%;

@@ -23,7 +23,7 @@ export const Footer = () => {
 
         <ContentLinkLogo>
           <TextRegular color="text" size="s">
-            Central de Aços © 2024 - Todos os direitos reservados.
+            Gaspar Transportes © 2024 - Todos os direitos reservados.
           </TextRegular>
           
           <TextRegular color="text" size="sm" weight={600}>
@@ -50,9 +50,6 @@ export const Footer = () => {
           <TextRegular color="text" weight={600}>
             <a href="#contact">Contatos</a>
           </TextRegular>
-          <TextRegular color="text" weight={600}>
-            <a href="#">Central Express</a>
-          </TextRegular>
         </LinkSite>
       </ContentLinkSite>
 
@@ -66,7 +63,8 @@ export const Footer = () => {
           <div>
             <TextRegular weight={600}>Whatsapp</TextRegular>
             <TextRegular size="sm" color="text">
-              (22) 2762-2717
+              <a href="tel:+55223518-0094">(22) 3518-0094</a> | {' '} 
+              <a href="tel:+552299774-0161">(22) 99774-0161</a>
             </TextRegular>
           </div>
         </TitleLinks>
@@ -76,7 +74,7 @@ export const Footer = () => {
           <div>
             <TextRegular weight={600}>Email</TextRegular>
             <TextRegular size="sm" color="text">
-              vendas@centraldeacos.com.br
+             atendimentos@ganail.com
             </TextRegular>
           </div>
         </TitleLinks>
@@ -85,7 +83,7 @@ export const Footer = () => {
           <MapPin size={31} color="#000" />
           <div>
             <TextRegular weight={600}>Matrix Macaé</TextRegular>
-            <TextRegular size="sm" color="text"> R. Evaldo Costa, 1103 - Sol Y Mar, Macaé - RJ</TextRegular>
+            <TextRegular size="sm" color="text"> Granja dos Cavaleiros, Macaé - RJ, Cep: 27930-480</TextRegular>
           </div>
         </TitleLinks>
 

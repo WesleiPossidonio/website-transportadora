@@ -6,13 +6,13 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 
 // import icons 
-import IconImage from '../../../../assets/IconTest.svg'
-import ChapasIcon from '../../../../assets/ChapasIcon.svg'
-import VigasIcon from '../../../../assets/VigasIcon.svg'
-import TarugosIcon from '../../../../assets/TarugosIcon.svg'
-import TelasTelconIcons from '../../../../assets/TelasIcon.svg'
-import TubosIcon from '../../../../assets/TubosIcon.svg'
-import CantoneiraIcon from '../../../../assets/CantoneiraIcon.svg'
+import StorageIcon from '../../../../assets/StorageIcon.svg'
+import CardCargasIcon from '../../../../assets/CardCargasIcon.svg'
+import BoxIcon from '../../../../assets/BoxIcon.svg'
+import ContainerIcon from '../../../../assets/ContainerIcon.svg'
+import TruckIconSecurity from '../../../../assets/TruckIconSecurity.svg'
+import TruckIcon from '../../../../assets/TruckIcon.svg'
+import PlaneIcon from '../../../../assets/PlaneIcon.svg'
 
 // Components
 import { Button, TextRegular, TitleText } from '../../../../components'
@@ -26,9 +26,9 @@ export const SectionServices = () => {
       <Header>
         <TitleText size='l'>Nossos Serviços</TitleText>
         <TextRegular weight={500} color='text'>
-          Mais do que fornecer aço, entregamos soluções sob medida que
-          transformam suas necessidades em realidade. Confiabilidade e
-          precisão em cada serviço.
+            Mais do que transportar mercadorias, entregamos confiança e 
+            soluções personalizadas que atendem às suas necessidades. 
+            Precisão e compromisso em cada entrega.
         </TextRegular>
         <Button bgColor='bg' btnLarge >Saiba Mais!</Button>
       </Header>
@@ -66,85 +66,76 @@ export const SectionServices = () => {
         className="mySwiper"
       >
         <CardSwiper>
-          <Icon src={IconImage} />
+          <Icon src={ContainerIcon} />
 
           <ContentTextCard>
-            <TitleText>Transporte de cargas offshore nos principais portos</TitleText>
-            <TextRegular size='s'>Estrutura sólida começa com as nossas barras de alta qualidade.</TextRegular>
+            <TitleText>Transporte de cargas offshore</TitleText>
           </ContentTextCard>
         </CardSwiper>
 
         <CardSwiper>
-          <Icon src={CantoneiraIcon} />
+          <Icon src={TruckIcon} />
 
           <ContentTextCard>
-            <TitleText>Transporte estadual e interestadual </TitleText>
-            <TextRegular>Cantoneiras que garantem o ângulo perfeito e a resistência que sua obra precisa.</TextRegular>
+            <TitleText>Transporte estadual e interestadual</TitleText>
           </ContentTextCard>
         </CardSwiper>
 
         <CardSwiper>
-          <Icon src={ChapasIcon} />
+          <Icon src={CardCargasIcon} />
 
           <ContentTextCard>
             <TitleText>Movimentação de carga</TitleText>
-            <TextRegular>Versatilidade e força em cada chapa para suas soluções estruturais.</TextRegular>
           </ContentTextCard>
         </CardSwiper>
 
         <CardSwiper>
-          <Icon src={VigasIcon} />
+          <Icon src={CardCargasIcon} />
 
           <ContentTextCard>
-            <TitleText>Locação de equipamentos, guindastes e caminhão munck</TitleText>
-            <TextRegular>Vigas robustas que sustentam grandes ideias e projetos grandiosos.</TextRegular>
+            <TitleText>Locação de Equipamentos, Guindastes e Caminhão Munck</TitleText>
           </ContentTextCard>
 
         </CardSwiper>
 
         <CardSwiper>
-          <Icon src={TarugosIcon} />
+          <Icon src={TruckIconSecurity} />
 
           <ContentTextCard>
-            <TitleText>Transporte de cargas especiais</TitleText>
-            <TextRegular>Tarugos de precisão para resultados impecáveis e duradouros.</TextRegular>
+            <TitleText>Transporte de Cargas Especiais</TitleText>
           </ContentTextCard>
 
         </CardSwiper>
 
         <CardSwiper>
-          <Icon src={TelasTelconIcons} />
+          <Icon src={TruckIcon} />
 
           <ContentTextCard>
-            <TitleText>Transporte de cargas de pequeno porte</TitleText>
-            <TextRegular>Proteção e segurança com as telas Telcon que você pode confiar.</TextRegular>
+            <TitleText>Transporte de Cargas de Pequeno Porte</TitleText>
           </ContentTextCard>
         </CardSwiper>
 
         <CardSwiper>
-          <Icon src={TubosIcon} />
+          <Icon src={PlaneIcon} />
 
           <ContentTextCard>
-            <TitleText> Embarque em aeroportos</TitleText>
-            <TextRegular>Tubos versáteis e resistentes para conduzir seus projetos ao sucesso</TextRegular>
+            <TitleText> Embarque em Aeroportos</TitleText>
           </ContentTextCard>
         </CardSwiper>
 
         <CardSwiper>
-          <Icon src={TubosIcon} />
+          <Icon src={StorageIcon} />
 
           <ContentTextCard>
-            <TitleText> Armazém geral </TitleText>
-            <TextRegular>Tubos versáteis e resistentes para conduzir seus projetos ao sucesso</TextRegular>
+            <TitleText> Armazém Geral </TitleText>
           </ContentTextCard>
         </CardSwiper>
 
         <CardSwiper>
-          <Icon src={TubosIcon} />
+          <Icon src={BoxIcon} />
 
           <ContentTextCard>
-            <TitleText> Logística de materiais com acompanhamento da carga ate sua entrega </TitleText>
-            <TextRegular>Tubos versáteis e resistentes para conduzir seus projetos ao sucesso</TextRegular>
+            <TitleText>Logística de materiais com Rastreamento </TitleText>
           </ContentTextCard>
         </CardSwiper>
 
