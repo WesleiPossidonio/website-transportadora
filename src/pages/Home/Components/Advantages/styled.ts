@@ -7,11 +7,11 @@ export const ContainerAdvantages = styled.section`
 
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 4rem;
+  justify-content: space-evenly;
+  gap: 2rem;
 
   margin: 0 auto;
-  padding: 3rem;
+  padding: 2rem 4rem;
 
   @media (max-width: 696px) {
     height: max-content;
@@ -24,8 +24,6 @@ export const ContainerAdvantages = styled.section`
 `;
 
 export const ContentText = styled.div`
-  width: 50%;
-
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -34,6 +32,11 @@ export const ContentText = styled.div`
 
   p {
     margin-top: 0.4rem;
+  }
+
+  p,
+  h1 {
+    max-width: 75%;
   }
 
   // estilização do title
@@ -66,7 +69,6 @@ export const ListAdvantages = styled.div`
     justify-content: center;
     gap: 1rem;
   }
-
 `;
 
 export const AdvantageBox = styled.div`
@@ -83,7 +85,6 @@ export const AdvantageBox = styled.div`
     align-items: flex-start;
     justify-content: center;
     gap: 0.3rem;
-  
   }
 
   img {
@@ -95,27 +96,27 @@ export const AdvantageBox = styled.div`
   }
 
   @keyframes moveY {
-  0% {
-    transform: translateY(0);
-    animation-timing-function: ease-out;
+    0% {
+      transform: translateY(0);
+      animation-timing-function: ease-out;
+    }
+    25% {
+      transform: translateY(-5px);
+      animation-timing-function: ease-in;
+    }
+    50% {
+      transform: translateY(-10px);
+      animation-timing-function: ease-out;
+    }
+    75% {
+      transform: translateY(-5px);
+      animation-timing-function: ease-in;
+    }
+    100% {
+      transform: translateY(0);
+      animation-timing-function: ease-out;
+    }
   }
-  25% {
-    transform: translateY(-5px);
-    animation-timing-function: ease-in;
-  }
-  50% {
-    transform: translateY(-10px);
-    animation-timing-function: ease-out;
-  }
-  75% {
-    transform: translateY(-5px);
-    animation-timing-function: ease-in;
-  }
-  100% {
-    transform: translateY(0);
-    animation-timing-function: ease-out;
-  }
-}
 `;
 
 export const ContentImg = styled.div`
@@ -145,8 +146,7 @@ export const BoxImage = styled.div<BoxImageProps>`
   @media (max-width: 768px) {
     width: ${({ widthImage }) =>
       widthImage === "imgOne" ? "min(11rem, 40vw)" : "min(11rem, 35vw)"};
-    height: ${({ widthImage }) =>
-      widthImage === "imgOne" ? "9rem" : "18rem"};
+    height: ${({ widthImage }) => (widthImage === "imgOne" ? "9rem" : "18rem")};
   }
 `;
 

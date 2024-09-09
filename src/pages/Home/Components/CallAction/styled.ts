@@ -34,7 +34,8 @@ export const ContentCallAction = styled.div`
   padding: 3rem;
 
   border-radius: 12px;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   background-color: ${({ theme }) => theme.colors["base-secundary-bg"]};
   position: relative;
 
@@ -61,14 +62,13 @@ export const ContentText = styled.div`
   button {
     margin-top: 1rem;
   }
-
 `;
 
 export const Image = styled.img`
   width: min(45rem, 43vw);
   margin-top: -6.3rem;
 
-  @media(max-width: 768px){
+  @media (max-width: 768px) {
     width: min(45rem, 80vw);
   }
 `;

@@ -7,9 +7,9 @@ export const ContainerAbout = styled.section`
 
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   gap: 2rem;
-  padding: 2rem;
+  padding: 2rem 4rem;
 
   margin: 0 auto;
 
@@ -24,18 +24,15 @@ export const ContainerAbout = styled.section`
 `;
 
 export const ContainerImage = styled.div`
-  width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
   position: relative;
 
-
   @media (max-width: 767px) {
     margin-top: -5rem;
   }
-
 `;
 
 export const ContentImageOne = styled.div`
@@ -49,19 +46,19 @@ export const ContentImageOne = styled.div`
   @media (max-width: 374px) {
     width: 11rem;
   }
-`
+`;
 
 export const LineImg = styled.span`
-width: 8rem;
-height: 10rem;
+  width: 8rem;
+  height: 10rem;
 
-position: absolute;
-top: 9.8rem;
-left: -1.1rem;
+  position: absolute;
+  top: 9.8rem;
+  left: -1.1rem;
 
-border-top: 5px solid ${({theme}) => theme.colors["base-secundary-bg"]};
-border-left: 5px solid ${({theme}) => theme.colors["base-secundary-bg"]};
-`
+  border-top: 5px solid ${({ theme }) => theme.colors["base-secundary-bg"]};
+  border-left: 5px solid ${({ theme }) => theme.colors["base-secundary-bg"]};
+`;
 
 export const ImgAbout = styled.img`
   width: 14rem;
@@ -76,7 +73,7 @@ export const ImgAbout = styled.img`
   }
 
   @media (max-width: 600px) {
-    width: 13rem ;
+    width: 13rem;
   }
 
   @media (max-width: 374px) {
@@ -95,36 +92,36 @@ export const ContentImageTwo = styled.div`
   @media (max-width: 374px) {
     width: 11rem;
   }
-`
+`;
 
 export const LineImgBotton = styled(LineImg)`
-width: 6rem;
-border-top: 0;
-border-left: 0;
+  width: 6rem;
+  border-top: 0;
+  border-left: 0;
 
-border-right: 5px solid ${({theme}) => theme.colors["base-secundary-bg"]};
-border-bottom: 5px solid ${({theme}) => theme.colors["base-secundary-bg"]};
+  border-right: 5px solid ${({ theme }) => theme.colors["base-secundary-bg"]};
+  border-bottom: 5px solid ${({ theme }) => theme.colors["base-secundary-bg"]};
 
-position: absolute;
-top: 14rem;
-left: 9.1rem;
+  position: absolute;
+  top: 14rem;
+  left: 9.1rem;
 
-@media (max-width: 768px) {
-  top: 10.2rem;
-}
+  @media (max-width: 768px) {
+    top: 10.2rem;
+  }
 
-@media (max-width: 600px) {
-  left: 8rem;
-}
+  @media (max-width: 600px) {
+    left: 8rem;
+  }
 
-@media (max-width: 600px) {
-  left: 8rem;
-}
+  @media (max-width: 600px) {
+    left: 8rem;
+  }
 
-@media (max-width: 374px) {
-  left: 6rem;
-}
-`
+  @media (max-width: 374px) {
+    left: 6rem;
+  }
+`;
 
 export const ImgAboutBotton = styled.img`
   width: 14rem;
@@ -144,37 +141,17 @@ export const ImgAboutBotton = styled.img`
   }
 `;
 
-// export const ContainerCountdown = styled.span`
-// width: 13rem;
-// position: absolute;
-
-// display: flex;
-// flex-direction: column;
-// align-items: center;
-// justify-content: center;
-// gap: 0.2rem;
-
-// bottom: 2rem;
-// right: 9rem;
-
-// padding: 1rem 2rem;
-// border: 0;
-// border-radius: 8px;
-
-// text-align: center;
-
-// background-color: ${({theme}) => theme.colors["base-white"]};
-// box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-// `
-
 export const ContainerTextAbout = styled.div`
-  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   gap: 0.5rem;
 
+  p,
+  h1 {
+    max-width: 75%;
+  }
   .TextAbout {
     margin-top: 1.2rem;
   }
@@ -187,6 +164,3 @@ export const ContainerTextAbout = styled.div`
     width: 100%;
   }
 `;
-
-
-

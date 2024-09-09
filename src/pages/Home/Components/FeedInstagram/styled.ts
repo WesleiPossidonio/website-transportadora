@@ -14,7 +14,7 @@ export const ContainerFeedInstagram = styled.section`
   padding: 2rem 1rem;
   margin: 0 auto;
 
-  background-color: ${({theme}) => theme.colors["base-white-100"]};
+  background-color: ${({ theme }) => theme.colors["base-white-100"]};
 `;
 
 export const ContainerTitle = styled.div`
@@ -64,7 +64,6 @@ export const LinkPost = styled.a`
     left: 1rem;
     right: 1rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-   
   }
 
   img,

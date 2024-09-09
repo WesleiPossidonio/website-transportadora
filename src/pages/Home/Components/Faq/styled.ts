@@ -61,9 +61,8 @@ export const ContentAcordion = styled.div`
   justify-content: center;
   gap: 1.5rem;
 
-
   @media (max-width: 768px) {
-   width: 100%;
+    width: 100%;
   }
 `;
 

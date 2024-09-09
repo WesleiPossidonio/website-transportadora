@@ -3,12 +3,12 @@ import { SwiperSlide } from "swiper/react";
 
 export const ContainerSectionServices = styled.section`
   width: 100%;
-  height: max-content;
+  min-height: max-content;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 3rem;
+  padding: 0 3rem;
 
   margin: 0 auto;
 

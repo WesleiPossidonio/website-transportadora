@@ -1,7 +1,10 @@
-
-import { Envelope, FacebookLogo, InstagramLogo } from "@phosphor-icons/react"
-import { ContainerHeaderLinks, ContainerLinks, ContentLinkContact, TextLink } from "./styled"
-
+import { Envelope, FacebookLogo, InstagramLogo } from "@phosphor-icons/react";
+import {
+  ContainerHeaderLinks,
+  ContainerLinks,
+  ContentLinkContact,
+  TextLink,
+} from "./styled";
 
 export const HeaderLinks = () => {
   return (
@@ -15,12 +18,11 @@ export const HeaderLinks = () => {
         <TextLink href="#" target="_blank">
           <InstagramLogo size={25} />
         </TextLink>
-        
-        <TextLink href="#" target="_blank">  
-          <FacebookLogo size={25}  />
+
+        <TextLink href="#" target="_blank">
+          <FacebookLogo size={25} />
         </TextLink>
       </ContainerLinks>
-     
     </ContainerHeaderLinks>
-  )
-}
+  );
+};

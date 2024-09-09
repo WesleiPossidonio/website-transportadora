@@ -32,9 +32,8 @@ export const ContentSwiper = styled(SwiperSlide)`
     .contentTextCenter {
       width: 100%;
       left: 0;
+    }
   }
-
-}
 `;
 
 export const ImgBanner = styled.img`

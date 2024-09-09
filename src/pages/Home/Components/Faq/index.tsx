@@ -1,11 +1,10 @@
+import Accordion from "@mui/material/Accordion";
 
-import Accordion from '@mui/material/Accordion';
-
-import AccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
 import { CaretDown } from "@phosphor-icons/react";
 import { TitleText } from "../../../../components";
-import ImageFaq from '../../../../assets/ImageFaq.svg'
+import ImageFaq from "../../../../assets/ImageFaq.svg";
 
 import {
   AccordionContent,
@@ -13,19 +12,20 @@ import {
   ContainerTitle,
   ContentAcordion,
   ContentFaq,
-  ImgFaq
-} from "./styled"
+  ImgFaq,
+} from "./styled";
 
 export const Faq = () => {
   return (
     <ContainerFaq>
       <ContainerTitle>
-        <TitleText size='s' color='bg'>Faq</TitleText>
+        <TitleText size="s" color="bg">
+          Faq
+        </TitleText>
         <TitleText size="l">Principais Dúvidas</TitleText>
       </ContainerTitle>
 
       <ContentFaq>
-
         <ContentAcordion>
           <Accordion>
             <AccordionContent
@@ -33,13 +33,15 @@ export const Faq = () => {
               aria-controls="panel1-content"
               id="panel1-header"
             >
-              <Typography>Como posso acompanhar o status da minha entrega?</Typography>
+              <Typography>
+                Como posso acompanhar o status da minha entrega?
+              </Typography>
             </AccordionContent>
             <AccordionDetails>
               <Typography>
-                Você pode acompanhar o status da sua entrega através do nosso 
-                sistema de rastreamento online, utilizando o código 
-                fornecido no momento da confirmação do pedido.
+                Você pode acompanhar o status da sua entrega através do nosso
+                sistema de rastreamento online, utilizando o código fornecido no
+                momento da confirmação do pedido.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -54,8 +56,8 @@ export const Faq = () => {
             </AccordionContent>
             <AccordionDetails>
               <Typography>
-                Transportamos uma ampla variedade de cargas, incluindo cargas 
-                secas, perecíveis, e cargas especiais sob consulta. Entre em 
+                Transportamos uma ampla variedade de cargas, incluindo cargas
+                secas, perecíveis, e cargas especiais sob consulta. Entre em
                 contato para detalhes sobre transporte especializado.
               </Typography>
             </AccordionDetails>
@@ -67,13 +69,15 @@ export const Faq = () => {
               aria-controls="panel2-content"
               id="panel2-header"
             >
-              <Typography>Vocês oferecem serviço de transporte internacional?</Typography>
+              <Typography>
+                Vocês oferecem serviço de transporte internacional?
+              </Typography>
             </AccordionContent>
             <AccordionDetails>
               <Typography>
-                Sim, oferecemos serviços de transporte internacional, 
-                tanto para importação quanto exportação, 
-                com soluções de logística completas.
+                Sim, oferecemos serviços de transporte internacional, tanto para
+                importação quanto exportação, com soluções de logística
+                completas.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -84,13 +88,15 @@ export const Faq = () => {
               aria-controls="panel2-content"
               id="panel2-header"
             >
-              <Typography>Qual é o prazo de entrega para o transporte de cargas?</Typography>
+              <Typography>
+                Qual é o prazo de entrega para o transporte de cargas?
+              </Typography>
             </AccordionContent>
             <AccordionDetails>
               <Typography>
-                O prazo de entrega depende da rota e do tipo de carga. 
-                Durante a solicitação do serviço, informamos o prazo 
-                estimado de acordo com sua necessidade.
+                O prazo de entrega depende da rota e do tipo de carga. Durante a
+                solicitação do serviço, informamos o prazo estimado de acordo
+                com sua necessidade.
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -105,18 +111,16 @@ export const Faq = () => {
             </AccordionContent>
             <AccordionDetails>
               <Typography>
-                Oferecemos seguro de cargas para garantir a proteção da sua 
-                mercadoria durante todo o processo de transporte. O valor do 
+                Oferecemos seguro de cargas para garantir a proteção da sua
+                mercadoria durante todo o processo de transporte. O valor do
                 seguro varia conforme o tipo e valor da carga.
               </Typography>
             </AccordionDetails>
           </Accordion>
-
         </ContentAcordion>
 
         <ImgFaq src={ImageFaq} alt="" />
       </ContentFaq>
     </ContainerFaq>
-  )
-}
-
+  );
+};

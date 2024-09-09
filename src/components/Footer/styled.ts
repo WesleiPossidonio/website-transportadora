@@ -34,7 +34,7 @@ export const ContentLogo = styled.div`
     gap: 0.3rem;
   }
 
-   a {
+  a {
     font-weight: 700;
     cursor: pointer;
   }
@@ -43,13 +43,13 @@ export const ContentLogo = styled.div`
     width: 5.5rem;
   }
 
+  a {
     &:hover {
-      a {
-        color : ${({ theme }) => theme.colors["base-bg"]};
-    }
+    color: ${({ theme }) => theme.colors["base-bg"]};
+  }
 
-        
-      }
+  }
+
 
   @media (max-width: 696px) {
     order: 1;
@@ -58,11 +58,11 @@ export const ContentLogo = styled.div`
 `;
 
 export const ContentLinkLogo = styled.div`
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-justify-content: center;
-`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+`;
 
 export const ContentContact = styled(ContentLogo)`
   @media (max-width: 696px) {
@@ -75,11 +75,10 @@ export const ContentContact = styled(ContentLogo)`
 `;
 
 export const ContentLinkSite = styled(ContentLogo)`
-  order: 2;
 
   @media (max-width: 696px) {
     margin: 0;
-
+    order: 2;
     div {
       margin: 0;
     }
@@ -87,7 +86,7 @@ export const ContentLinkSite = styled(ContentLogo)`
 `;
 
 export const LinkSite = styled(ContentLogo)`
-  gap: 0.6rem
+  gap: 0.6rem;
 `;
 
 export const TitleLinks = styled.div`
@@ -107,7 +106,7 @@ export const TitleLinks = styled.div`
     cursor: pointer;
 
     &:hover {
-      color: ${({theme}) => theme.colors["base-bg"]};
+      color: ${({ theme }) => theme.colors["base-bg"]};
     }
   }
 `;
