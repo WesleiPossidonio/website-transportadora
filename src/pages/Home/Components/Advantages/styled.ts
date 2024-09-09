@@ -52,6 +52,15 @@ export const ContentText = styled.div`
 
   @media (max-width: 696px) {
     width: 100%;
+
+    p,
+    h1 {
+    max-width: 100%;
+  }
+
+  p {
+    margin-bottom: 0.5rem;
+  }
   }
 `;
 

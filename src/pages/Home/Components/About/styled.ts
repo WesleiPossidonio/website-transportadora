@@ -152,6 +152,7 @@ export const ContainerTextAbout = styled.div`
   h1 {
     max-width: 75%;
   }
+
   .TextAbout {
     margin-top: 1.2rem;
   }
@@ -162,5 +163,10 @@ export const ContainerTextAbout = styled.div`
 
   @media (max-width: 767px) {
     width: 100%;
+
+    p,
+    h1 {
+      max-width: 100%;
+    }
   }
 `;
