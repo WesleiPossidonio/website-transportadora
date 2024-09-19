@@ -30,7 +30,9 @@ export const SectionServices = () => {
             soluções personalizadas que atendem às suas necessidades. 
             Precisão e compromisso em cada entrega.
         </TextRegular>
-        <Button bgColor='bg' btnLarge >Saiba Mais!</Button>
+        <Button bgColor='bg' btnLarge >
+          <a href="https://wa.me/5522999515222?text=" target="_blank">Saiba Mais!</a>
+        </Button>
       </Header>
 
       <Swiper

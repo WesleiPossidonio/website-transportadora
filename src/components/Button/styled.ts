@@ -24,4 +24,8 @@ cursor: pointer;
 a {
   color: ${({theme, bgColor}) => bgColor === 'white' ? theme.colors["base-text"] : theme.colors["base-white"]};
 }
+
+&:hover {
+  opacity: 0.9;
+}
 `

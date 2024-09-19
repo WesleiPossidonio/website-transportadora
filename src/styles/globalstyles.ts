@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
  *{
@@ -11,6 +11,7 @@ export const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
     scroll-margin: 3rem;
     text-decoration: none;
+
   }
 
  html {
@@ -24,6 +25,6 @@ export const GlobalStyle = createGlobalStyle`
  }
 
  body {
-   background: ${({ theme }) => theme.colors['base-white']};
+   background: ${({ theme }) => theme.colors["base-white"]};
  }
-`
+`;

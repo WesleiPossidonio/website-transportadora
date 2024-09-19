@@ -70,7 +70,7 @@ export const AccordionContent = muiStyled(AccordionSummary)({
   borderRadius: "8px",
 
   "&:focus": {
-    backgroundColor: "#023345",
+    backgroundColor: "#7888A8",
     color: "#fff",
     border: "none",
     borderRadius: "8px",

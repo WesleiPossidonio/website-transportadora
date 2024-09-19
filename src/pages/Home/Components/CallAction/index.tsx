@@ -23,7 +23,7 @@ export const CallAction = () => {
           </TextRegular>
           <Button btnLarge bgColor="white">
             <a
-              href="https://api.whatsapp.com/send?phone=552227622717&text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento"
+              href="https://wa.me/5522999515222?text="
               target="_blank"
             >
               Faça o seu Pedido!

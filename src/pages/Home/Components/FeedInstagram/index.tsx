@@ -1,42 +1,29 @@
-import { useEffect, useState } from "react";
+
+import AOS from "aos";
+import * as Dialog from '@radix-ui/react-dialog'
+import { useEffect } from "react";
+import { ModalInstagram, TitleText } from "../../../../components";
+import { InstagramLogo, VideoCamera } from "@phosphor-icons/react";
+import { useDataCompany } from "../../../../context/CompanyContext";
+import { format } from "date-fns";
+import { ptBR } from 'date-fns/locale';
+
 import {
   ContainerFeedInstagram,
   ContainerTitle,
   ContentFeedInstagram,
+  ContentTextHover,
   LinkPost,
+  TextPost,
 } from "./styled";
-import api from "../../../../Services/api";
-import { TextRegular, TitleText } from "../../../../components";
-import AOS from "aos";
-
-interface FeedInstragramProps {
-  id: string;
-  caption: string;
-  media_type: "VIDEO" | "IMAGE";
-  media_url: string;
-  permalink: string;
-}
 
 export const FeedInstagram = () => {
-  const [feedList, setFeedList] = useState<FeedInstragramProps[]>([]);
+  const { feedInstagramData } = useDataCompany()
 
   useEffect(() => {
     AOS.init();
   }, []);
 
-  useEffect(() => {
-    try {
-      const getFeedInstagram = async () => {
-        const feedInstagram = await api.get("feedInsta");
-        const newFeedInstagram: FeedInstragramProps[] = feedInstagram.data.data;
-        setFeedList(newFeedInstagram);
-      };
-
-      getFeedInstagram();
-    } catch (error) {
-      console.log("Error ao buscar o feed do instagram =>", error);
-    }
-  }, []);
   return (
     <ContainerFeedInstagram>
       <ContainerTitle>
@@ -47,26 +34,39 @@ export const FeedInstagram = () => {
       </ContainerTitle>
 
       <ContentFeedInstagram>
-        {feedList.slice(0, 6).map((post) => {
+        {feedInstagramData.slice(0, 6).map((post) => {
           return (
-            <LinkPost
-              key={post.id}
-              href={post.permalink}
-              target="_blank"
-              data-aos="zoom-in"
-              data-aos-duration="1000"
-            >
-              <TextRegular size="sm" color="white" weight={500}>
-                {post.caption}
-              </TextRegular>
-              {post.media_type !== "IMAGE" ? (
-                <video controls>
-                  <source src={post.media_url} />
-                </video>
-              ) : (
-                <img src={post.media_url} alt="" />
-              )}
-            </LinkPost>
+            <Dialog.Root>
+              <Dialog.Trigger asChild>
+                <LinkPost
+                  key={post.id}
+                  data-aos="zoom-in"
+                  data-aos-duration="1000"
+                >
+
+                  <ContentTextHover>
+                    <TextPost>
+                      {format(new Date(post.timestamp), "dd MMMM yyyy", { locale: ptBR })}
+                    </TextPost>
+                    <TextPost>
+                      {post.caption}
+                    </TextPost>
+                  </ContentTextHover>
+
+                  {post.media_type !== "IMAGE" ? (
+                    <img src={post.thumbnail_url} alt="" />
+                  ) : (
+                    <img src={post.media_url} alt="" />
+                  )}
+                  <InstagramLogo size={22} color="#fff" weight="bold" id="logoInstagram" />
+                  {
+                    post.media_type === "VIDEO" && <VideoCamera size={20} weight="bold" id="videoIcon" color="#fff" />
+                  }
+                </LinkPost>
+              </Dialog.Trigger>
+              <ModalInstagram idPostInstagram={post.id} />
+            </Dialog.Root>
+
           );
         })}
       </ContentFeedInstagram>

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ContainerFooter = styled.footer`
   width: 100%;
-  height: 20rem;
+  height: 22rem;
   padding: 2.5rem 2rem;
 
   display: flex;
@@ -45,11 +45,9 @@ export const ContentLogo = styled.div`
 
   a {
     &:hover {
-    color: ${({ theme }) => theme.colors["base-bg"]};
+      color: ${({ theme }) => theme.colors["base-bg"]};
+    }
   }
-
-  }
-
 
   @media (max-width: 696px) {
     order: 1;
@@ -64,6 +62,39 @@ export const ContentLinkLogo = styled.div`
   justify-content: center;
 `;
 
+export const ContentLinkIcons = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 0.5rem;
+`
+
+export const IconsContent = styled.span`
+width: 2.3rem;
+height: 2.3rem;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+border: 0;
+border-radius: 50%;
+
+padding: 0.5rem;
+box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+background-color: ${({theme}) => theme.colors["base-gray-100"]};
+
+cursor: pointer;
+
+&:hover {
+  background-color: ${({theme}) => theme.colors["base-secundary-bg"]};
+
+  svg {
+    color: #fff;
+  }
+}
+`
+
 export const ContentContact = styled(ContentLogo)`
   @media (max-width: 696px) {
     order: 3;
@@ -75,7 +106,6 @@ export const ContentContact = styled(ContentLogo)`
 `;
 
 export const ContentLinkSite = styled(ContentLogo)`
-
   @media (max-width: 696px) {
     margin: 0;
     order: 2;
@@ -113,4 +143,28 @@ export const TitleLinks = styled.div`
 
 export const ImgLogo = styled.img`
   width: 10rem;
+`;
+
+export const ContentLinkContact = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.3rem;
+
+  a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    gap: 0.3rem;
+    font-size: ${({theme}) => theme.FontSizes["text-regular-sm"]};
+    color: ${({theme}) => theme.colors["base-text"]};
+    font-weight: 500;
+  }
+
+  &:hover {
+    color: ${({theme}) => theme.colors["base-secundary-bg"]};
+  }
 `;

@@ -20,9 +20,10 @@ export const ContainerContact = styled.section`
   }
 `;
 
+
 export const ContentContact = styled.div`
   width: 100%;
-  height: 50rem;
+  height: 55rem;
 
   display: flex;
   flex-direction: column;
@@ -46,13 +47,15 @@ export const ContentContact = styled.div`
     margin-top: 1rem;
   }
 
+
+
   @media (max-width: 680px) {
     height: max-content;
     padding: 2rem;
 
     #Maps {
-    margin-bottom: 2rem;
-  }
+      margin-bottom: 2rem;
+    }
   }
 `;
 
@@ -70,7 +73,7 @@ export const ContentInfo = styled.div`
 `;
 
 export const ContainerEmailAndWhatsapp = styled.div`
- width: 50%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -92,7 +95,7 @@ export const ContentEmailAndWhatsapp = styled.div`
   gap: 1rem;
 
   a {
-    font-size: ${({ theme }) => theme.FontSizes["text-regular-sm"]};
+    font-size: ${({ theme }) => theme.FontSizes["title-regular-sm"]};
     color: ${({ theme }) => theme.colors["base-white"]};
   }
 

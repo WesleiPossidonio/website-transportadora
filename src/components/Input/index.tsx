@@ -17,7 +17,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           <InputStyled ref={ref} {...props} />
         </InputContaineStyle>
         {error !== undefined && (
-          <TextRegular size="s" color="red">
+          <TextRegular size="sm" color="red">
             {error}
           </TextRegular>
         )}
