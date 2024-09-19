@@ -139,8 +139,7 @@ export const Contact = () => {
                 </TextRegular>
               </div>
             </ContentEmailAndWhatsapp>
-
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14761.200920487832!2d-41.7800668!3d-22.3422898!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9631034350483d%3A0x70cb7e0d8599d035!2sGaspar%20Transportes!5e0!3m2!1spt-BR!2sbr!4v1725533352573!5m2!1spt-BR!2sbr" width="600" height="450" loading="lazy" id="Maps" ></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.3003620028376!2d-41.782641725422316!3d-22.34228481793921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9631034350483d%3A0x70cb7e0d8599d035!2sGaspar%20Transportes!5e0!3m2!1spt-BR!2sbr!4v1726778973674!5m2!1spt-BR!2sbr" width="400" height="300" loading="lazy" id="Maps"></iframe>
           </ContainerEmailAndWhatsapp>
 
           <ContentForm onSubmit={handleSubmit(handleSendEmail)}>
