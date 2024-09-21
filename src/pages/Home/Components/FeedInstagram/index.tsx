@@ -34,7 +34,7 @@ export const FeedInstagram = () => {
       </ContainerTitle>
 
       <ContentFeedInstagram>
-        {feedInstagramData.slice(0, 6).map((post) => {
+        {feedInstagramData.slice(0, 8).map((post) => {
           return (
             <Dialog.Root>
               <Dialog.Trigger asChild>

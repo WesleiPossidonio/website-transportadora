@@ -2,12 +2,13 @@ import styled from "styled-components";
 
 export const ContainerFooter = styled.footer`
   width: 100%;
-  height: 22rem;
+  height: 24rem;
   padding: 2.5rem 2rem;
 
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
+  padding: 3rem;
 
   background-color: ${({ theme }) => theme.colors["base-white"]};
 
@@ -153,7 +154,6 @@ export const ContentLinkContact = styled.div`
   gap: 0.3rem;
 
   a {
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;

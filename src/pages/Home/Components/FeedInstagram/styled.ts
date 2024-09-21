@@ -37,7 +37,7 @@ export const ContainerTitle = styled.div`
 export const ContentFeedInstagram = styled.div`
   max-width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(14.625rem, 7vw));
+  grid-template-columns: repeat(auto-fit, minmax(14.625rem, 1fr));
   gap: 1.5rem;
 
   margin: 0 auto;
@@ -48,10 +48,16 @@ export const ContentFeedInstagram = styled.div`
     max-width: 70rem;
   }
 
-  @media (max-width: 433px) {
-    max-width: 100%;
-    grid-template-columns: repeat(2, minmax(11.625rem, 3vw));
-    padding: 0;
+  @media (max-width: 720px) {
+    padding: 1rem;
+  }
+
+  @media (max-width: 375px) {
+    grid-template-columns: repeat(auto-fit, minmax(10.625rem, 1fr));
+  }
+
+  @media (max-width: 320px) {
+    grid-template-columns: repeat(auto-fit, minmax(8.625rem, 1fr));
   }
 `;
 
@@ -65,6 +71,8 @@ export const LinkPost = styled.div`
 
   img,
   video {
+    width: 15rem;
+    height: 15rem;
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
@@ -103,6 +111,20 @@ export const LinkPost = styled.div`
       filter: brightness(0.3);
     }
   }
+
+  @media (max-width: 375px) {
+    img,
+    video {
+      height: 12.5rem;
+    }
+  }
+
+  @media (max-width: 320px) {
+    img,
+    video {
+      height: 10rem;
+    }
+  }
 `;
 
 export const ContentTextHover = styled.div`
@@ -118,7 +140,7 @@ export const TextPost = styled.p`
   font-weight: 400;
   text-align: center;
   line-height: 1.2rem;
-  color: ${({theme}) => theme.colors["base-white"]};
+  color: ${({ theme }) => theme.colors["base-white"]};
 
   display: -webkit-box;
   -webkit-line-clamp: 2;

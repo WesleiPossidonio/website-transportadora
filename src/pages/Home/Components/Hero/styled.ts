@@ -64,7 +64,7 @@ export const ContentText = styled.div`
     left: 0;
     padding: 2rem;
     h1 {
-      font-size: min(3.5rem, 6.5vw);
+      font-size: min(3.5rem, 9.5vw);
     }
   }
 `;

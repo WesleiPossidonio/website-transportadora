@@ -13,9 +13,8 @@ export const Overlay = styled(Dialog.Overlay)`
 
 export const ContentModal = styled(Dialog.Content)`
   z-index: 9999;
-  width: 75%;
-  height: max-content;
-  max-height: 90vh;
+  width: 85%;
+  max-height: max-content;
 
   margin: 0 auto;
 
@@ -41,7 +40,7 @@ export const ContentModal = styled(Dialog.Content)`
   @media (max-width: 550px) {
     flex-direction: column;
     gap: 2rem;
-    padding: 1rem 1rem 2rem 1rem;
+    padding: 1rem 1rem 4rem 1rem;
   }
 `;
 
@@ -91,7 +90,7 @@ export const LinkMedia = styled.a`
   width: 50%;
   video {
     width: 85%;
-    max-height: 35rem;
+    max-height: 70vh;
     border-radius: 10px;
   }
 
@@ -99,7 +98,7 @@ export const LinkMedia = styled.a`
     width: 85%;
     border-radius: 10px;
     object-fit: cover;
-    max-height: 35rem;
+    max-height: 37rem;
   }
 
   @media (max-width: 550px) {
