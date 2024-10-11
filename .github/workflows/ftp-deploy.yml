@@ -3,28 +3,31 @@ name: Deploy via ftp
 on: 
   push:
     branches:
-      - master  # Alterar para o branch correto se necessário
+      - main
 
 jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v3  # Checkout do repositório
+
+    - name: Setup Node.js 20
+      uses: actions/setup-node@v3  # Configura a versão do Node.js
       with:
-        # Forçar o uso do Node.js 20
         node-version: '20'
+
     - name: Install Dependencies
-      run: yarn install  # Comando de instalação com Yarn
+      run: yarn install  # Instala dependências usando Yarn
 
     - name: Build Project
-      run: yarn build  # Comando de build com Yarn
+      run: yarn build  # Build do projeto
 
     - name: FTP Deploy Locaweb
       uses: locaweb/ftp-deploy@1.0.0
       with:
-        host: ${{ secrets.HOST }}        # Ex: ftp.seudominio.com
-        user: ${{ secrets.USER }}        # Nome de usuário do FTP
-        password: ${{ secrets.PASS }}    # Senha do FTP
-        localDir: "dist"                # Pasta gerada pelo build
-        remoteDir: "/home/gaspartransporte1/"  # Pasta raiz do servidor
+        host: ${{ secrets.HOST }}
+        user: ${{ secrets.USER }}
+        password: ${{ secrets.PASS }}
+        localDir: "build"
+        remoteDir: "/home/gaspartransporte1/"
