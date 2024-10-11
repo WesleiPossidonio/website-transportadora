@@ -1,0 +1,28 @@
+name: Deploy via ftp
+
+on: 
+  push:
+    branches:
+      - main  # Alterar para o branch correto se necessário
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install Dependencies
+      run: yarn install  # Comando de instalação com Yarn
+
+    - name: Build Project
+      run: yarn build  # Comando de build com Yarn
+
+    - name: FTP Deploy Locaweb
+      uses: locaweb/ftp-deploy@1.0.0
+      with:
+        host: ${{ secrets.HOST }}        # Ex: ftp.seudominio.com
+        user: ${{ secrets.USER }}        # Nome de usuário do FTP
+        password: ${{ secrets.PASS }}    # Senha do FTP
+        localDir: "build"                # Pasta gerada pelo build
+        remoteDir: "/home/gaspartransporte1/"  # Pasta raiz do servidor
