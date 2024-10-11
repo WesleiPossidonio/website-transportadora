@@ -1,4 +1,11 @@
-import { CaretRight, Envelope, FacebookLogo, InstagramLogo, MapPin, WhatsappLogo } from "@phosphor-icons/react";
+import {
+  CaretRight,
+  Envelope,
+  FacebookLogo,
+  InstagramLogo,
+  MapPin,
+  WhatsappLogo,
+} from "@phosphor-icons/react";
 import Logo from "../../assets/logo.png";
 import LogoCriard from "../../assets/criard_logo.png";
 import { TextRegular, TitleText } from "../typografy";
@@ -41,7 +48,7 @@ export const Footer = () => {
           </IconsContent>
 
           <IconsContent>
-            <FacebookLogo size={32} weight="regular"/>
+            <FacebookLogo size={32} weight="regular" />
           </IconsContent>
         </ContentLinkIcons>
       </ContentLogo>
@@ -62,7 +69,7 @@ export const Footer = () => {
             <a href="#contact">Contatos</a>
           </TextRegular>
           <TextRegular color="text" weight={600}>
-          <a href="#">Política de Privacidade</a>
+            <a href="#">Política de Privacidade</a>
           </TextRegular>
         </LinkSite>
       </ContentLinkSite>
@@ -92,7 +99,6 @@ export const Footer = () => {
         </TitleLinks>
 
         <TitleLinks>
-
           <ContentLinkContact>
             <TextRegular weight={600}>
               <Envelope size={28} color="#000" />
@@ -121,7 +127,6 @@ export const Footer = () => {
           </ContentLinkContact>
         </TitleLinks>
       </ContentContact>
-
     </ContainerFooter>
   );
 };

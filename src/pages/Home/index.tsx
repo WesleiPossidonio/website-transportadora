@@ -1,14 +1,14 @@
-import { Contact } from "../../components"
-import { 
-  About, 
-  Advantages, 
-  BannerMain, 
+import { Contact } from "../../components";
+import {
+  About,
+  Advantages,
+  BannerMain,
   CallAction,
-  Faq, 
-  FeedInstagram, 
-  SectionServices 
-} from "./Components"
-import { ContainerPage} from "./styled"
+  Faq,
+  FeedInstagram,
+  SectionServices,
+} from "./Components";
+import { ContainerPage } from "./styled";
 
 export const Home = () => {
   return (
@@ -22,7 +22,5 @@ export const Home = () => {
       <Faq />
       <Contact />
     </ContainerPage>
-  )
-}
-
-
+  );
+};

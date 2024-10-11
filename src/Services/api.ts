@@ -1,7 +1,7 @@
-import axios from 'axios'
+import axios from "axios";
 
 const api = axios.create({
-  baseURL: 'https://central-de-aco.vercel.app',
-})
+  baseURL: "https://api-gaspartransportes.vercel.app/",
+});
 
-export default api
+export default api;

@@ -1,37 +1,42 @@
-
 // swiper Banner
-import { Pagination, Autoplay } from 'swiper/modules'
-import { Swiper } from 'swiper/react'
-import 'swiper/css'
-import 'swiper/css/pagination'
+import { Pagination, Autoplay } from "swiper/modules";
+import { Swiper } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
 
-// import icons 
-import StorageIcon from '../../../../assets/StorageIcon.svg'
-import CardCargasIcon from '../../../../assets/CardCargasIcon.svg'
-import BoxIcon from '../../../../assets/BoxIcon.svg'
-import ContainerIcon from '../../../../assets/ContainerIcon.svg'
-import TruckIconSecurity from '../../../../assets/TruckIconSecurity.svg'
-import TruckIcon from '../../../../assets/TruckIcon.svg'
-import PlaneIcon from '../../../../assets/PlaneIcon.svg'
+// import icons
+import StorageIcon from "../../../../assets/StorageIcon.svg";
+import CardCargasIcon from "../../../../assets/CardCargasIcon.svg";
+import BoxIcon from "../../../../assets/BoxIcon.svg";
+import ContainerIcon from "../../../../assets/ContainerIcon.svg";
+import TruckIconSecurity from "../../../../assets/TruckIconSecurity.svg";
+import TruckIcon from "../../../../assets/TruckIcon.svg";
+import PlaneIcon from "../../../../assets/PlaneIcon.svg";
 
 // Components
-import { Button, TextRegular, TitleText } from '../../../../components'
-import { CardSwiper, ContainerSectionServices, ContentTextCard, Header, Icon } from './styled'
-
+import { Button, TextRegular, TitleText } from "../../../../components";
+import {
+  CardSwiper,
+  ContainerSectionServices,
+  ContentTextCard,
+  Header,
+  Icon,
+} from "./styled";
 
 export const SectionServices = () => {
-
   return (
-    <ContainerSectionServices id='services'>
+    <ContainerSectionServices id="services">
       <Header>
-        <TitleText size='l'>Nossos Serviços</TitleText>
-        <TextRegular weight={500} color='text'>
-            Mais do que transportar mercadorias, entregamos confiança e 
-            soluções personalizadas que atendem às suas necessidades. 
-            Precisão e compromisso em cada entrega.
+        <TitleText size="l">Nossos Serviços</TitleText>
+        <TextRegular weight={500} color="text">
+          Mais do que transportar mercadorias, entregamos confiança e soluções
+          personalizadas que atendem às suas necessidades. Precisão e
+          compromisso em cada entrega.
         </TextRegular>
-        <Button bgColor='bg' btnLarge >
-          <a href="https://wa.me/5522999515222?text=" target="_blank">Saiba Mais!</a>
+        <Button bgColor="bg" btnLarge>
+          <a href="https://wa.me/5522999515222?text=" target="_blank">
+            Saiba Mais!
+          </a>
         </Button>
       </Header>
 
@@ -95,9 +100,10 @@ export const SectionServices = () => {
           <Icon src={CardCargasIcon} />
 
           <ContentTextCard>
-            <TitleText>Locação de Equipamentos, Guindastes e Caminhão Munck</TitleText>
+            <TitleText>
+              Locação de Equipamentos, Guindastes e Caminhão Munck
+            </TitleText>
           </ContentTextCard>
-
         </CardSwiper>
 
         <CardSwiper>
@@ -106,7 +112,6 @@ export const SectionServices = () => {
           <ContentTextCard>
             <TitleText>Transporte de Cargas Especiais</TitleText>
           </ContentTextCard>
-
         </CardSwiper>
 
         <CardSwiper>
@@ -140,10 +145,7 @@ export const SectionServices = () => {
             <TitleText>Logística de materiais com Rastreamento </TitleText>
           </ContentTextCard>
         </CardSwiper>
-
       </Swiper>
     </ContainerSectionServices>
-  )
-}
-
-
+  );
+};

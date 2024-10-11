@@ -1,7 +1,7 @@
 //Images
-import imgBannerOne from "../../../../assets/ImgBanner.jpeg";
-import imgBannerTwo from "../../../../assets/ImgBannerTwo.jpeg";
-import imgBannerThree from "../../../../assets/ImgBannerThree.jpeg";
+import imgBannerOne from "../../../../assets/ImgAbout1.jpg";
+import imgBannerTwo from "../../../../assets/ImgBannerTwo.jpg";
+import imgBannerThree from "../../../../assets/ImgBannerThree.jpg";
 
 //Components
 import { ContainerMain, ContentSwiper, ContentText, ImgBanner } from "./styled";

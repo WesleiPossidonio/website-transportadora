@@ -64,37 +64,37 @@ export const ContentLinkLogo = styled.div`
 `;
 
 export const ContentLinkIcons = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 0.5rem;
-`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+`;
 
 export const IconsContent = styled.span`
-width: 2.3rem;
-height: 2.3rem;
+  width: 2.3rem;
+  height: 2.3rem;
 
-display: flex;
-align-items: center;
-justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-border: 0;
-border-radius: 50%;
+  border: 0;
+  border-radius: 50%;
 
-padding: 0.5rem;
-box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-background-color: ${({theme}) => theme.colors["base-gray-100"]};
+  padding: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  background-color: ${({ theme }) => theme.colors["base-gray-100"]};
 
-cursor: pointer;
+  cursor: pointer;
 
-&:hover {
-  background-color: ${({theme}) => theme.colors["base-secundary-bg"]};
+  &:hover {
+    background-color: ${({ theme }) => theme.colors["base-secundary-bg"]};
 
-  svg {
-    color: #fff;
+    svg {
+      color: #fff;
+    }
   }
-}
-`
+`;
 
 export const ContentContact = styled(ContentLogo)`
   @media (max-width: 696px) {
@@ -159,12 +159,12 @@ export const ContentLinkContact = styled.div`
     justify-content: space-evenly;
 
     gap: 0.3rem;
-    font-size: ${({theme}) => theme.FontSizes["text-regular-sm"]};
-    color: ${({theme}) => theme.colors["base-text"]};
+    font-size: ${({ theme }) => theme.FontSizes["text-regular-sm"]};
+    color: ${({ theme }) => theme.colors["base-text"]};
     font-weight: 500;
   }
 
   &:hover {
-    color: ${({theme}) => theme.colors["base-secundary-bg"]};
+    color: ${({ theme }) => theme.colors["base-secundary-bg"]};
   }
 `;

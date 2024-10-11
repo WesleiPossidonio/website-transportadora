@@ -1,24 +1,24 @@
 import styled from "styled-components";
 
 interface HeaderProps {
-  stateHeader?: boolean
+  stateHeader?: boolean;
 }
 
 export const ContainerHeaderMenu = styled.header<HeaderProps>`
-width: 100%;
-height: 5.2rem;
-padding: 1rem 2rem;
-position: fixed;
-z-index: 999;
+  width: 100%;
+  height: 5.2rem;
+  padding: 1rem 2rem;
+  position: fixed;
+  z-index: 999;
 
-display: flex;
-justify-content: space-between;
-align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-background: ${({ theme, stateHeader }) =>
-    stateHeader ? theme.colors['base-white'] : 'transparent'};
+  background: ${({ theme, stateHeader }) =>
+    stateHeader ? theme.colors["base-white"] : "transparent"};
 
-> svg {
+  > svg {
     display: none;
     z-index: 9999;
   }
@@ -26,10 +26,10 @@ background: ${({ theme, stateHeader }) =>
   @media (max-width: 970px) {
     > svg {
       display: block;
-      color: ${({ theme }) => theme.colors['base-bg']};
+      color: ${({ theme }) => theme.colors["base-bg"]};
     }
   }
-`
+`;
 
 export const NavDesktop = styled.nav`
   display: flex;
@@ -41,10 +41,10 @@ export const NavDesktop = styled.nav`
   @media (max-width: 970px) {
     display: none;
   }
-`
+`;
 
 export const NavLink = styled.a<HeaderProps>`
-  font-size: ${({ theme }) => theme.FontSizes['text-regular-m']};
+  font-size: ${({ theme }) => theme.FontSizes["text-regular-m"]};
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -53,24 +53,24 @@ export const NavLink = styled.a<HeaderProps>`
 
   color: ${({ theme, stateHeader }) =>
     stateHeader === true
-      ? theme.colors['base-secundary-bg']
-      : theme.colors['base-white']};
+      ? theme.colors["base-secundary-bg"]
+      : theme.colors["base-white"]};
   cursor: pointer;
 
   transition: 0.2s ease-in;
 
   &:hover {
-    color: ${({ theme }) => theme.colors['base-bg']};
+    color: ${({ theme }) => theme.colors["base-bg"]};
   }
-`
+`;
 
 export const ImgLogo = styled.img`
-width: 9.2rem;
-z-index: 999;
-`
+  width: 9.2rem;
+  z-index: 999;
+`;
 
 interface NavMobileProps {
-  isOpen: boolean
+  isOpen: boolean;
 }
 
 export const NavMobile = styled.nav<NavMobileProps>`
@@ -78,7 +78,7 @@ export const NavMobile = styled.nav<NavMobileProps>`
   height: 100vh;
   overflow: hidden;
 
-  display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
+  display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -92,12 +92,11 @@ export const NavMobile = styled.nav<NavMobileProps>`
 
   z-index: 99;
 
-  background-color: ${({ theme }) => theme.colors['base-white']};
-`
+  background-color: ${({ theme }) => theme.colors["base-white"]};
+`;
 
 export const NavLinkMobile = styled(NavLink)`
   font-size: ${({ theme }) => theme.FontSizes["title-regular-m"]};
-  color: ${({ theme }) => theme.colors['base-bg']};
+  color: ${({ theme }) => theme.colors["base-bg"]};
   font-weight: 500;
-`
-
+`;

@@ -43,6 +43,8 @@ export const ListCompanyProvider = ({ children }: ListCompanyProps) => {
       const response = await api.get('feedInsta')
       const { data } = response
 
+      await localStorage.setItem('feedInsta:gasparTransportes1.0', JSON.stringify(data.data))
+
       setFeedInstagramData(data.data)
     } catch (error) {
       console.log("Error ao buscar o feed do instagram =>", error);
@@ -50,6 +52,11 @@ export const ListCompanyProvider = ({ children }: ListCompanyProps) => {
   }, [])
 
   useEffect(() => {
+    const feedinsta = localStorage.getItem('feedInsta:gasparTransportes1.0')
+
+    if(feedinsta){
+      setFeedInstagramData(JSON.parse(feedinsta))
+    }
     getFeedIntagram()
   }, [getFeedIntagram])
 

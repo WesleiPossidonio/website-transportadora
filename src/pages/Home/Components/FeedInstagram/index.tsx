@@ -1,12 +1,11 @@
-
 import AOS from "aos";
-import * as Dialog from '@radix-ui/react-dialog'
+import * as Dialog from "@radix-ui/react-dialog";
 import { useEffect } from "react";
 import { ModalInstagram, TitleText } from "../../../../components";
 import { InstagramLogo, VideoCamera } from "@phosphor-icons/react";
 import { useDataCompany } from "../../../../context/CompanyContext";
 import { format } from "date-fns";
-import { ptBR } from 'date-fns/locale';
+import { ptBR } from "date-fns/locale";
 
 import {
   ContainerFeedInstagram,
@@ -18,7 +17,7 @@ import {
 } from "./styled";
 
 export const FeedInstagram = () => {
-  const { feedInstagramData } = useDataCompany()
+  const { feedInstagramData } = useDataCompany();
 
   useEffect(() => {
     AOS.init();
@@ -43,14 +42,13 @@ export const FeedInstagram = () => {
                   data-aos="zoom-in"
                   data-aos-duration="1000"
                 >
-
                   <ContentTextHover>
                     <TextPost>
-                      {format(new Date(post.timestamp), "dd MMMM yyyy", { locale: ptBR })}
+                      {format(new Date(post.timestamp), "dd MMMM yyyy", {
+                        locale: ptBR,
+                      })}
                     </TextPost>
-                    <TextPost>
-                      {post.caption}
-                    </TextPost>
+                    <TextPost>{post.caption}</TextPost>
                   </ContentTextHover>
 
                   {post.media_type !== "IMAGE" ? (
@@ -58,15 +56,24 @@ export const FeedInstagram = () => {
                   ) : (
                     <img src={post.media_url} alt="" />
                   )}
-                  <InstagramLogo size={22} color="#fff" weight="bold" id="logoInstagram" />
-                  {
-                    post.media_type === "VIDEO" && <VideoCamera size={20} weight="bold" id="videoIcon" color="#fff" />
-                  }
+                  <InstagramLogo
+                    size={22}
+                    color="#fff"
+                    weight="bold"
+                    id="logoInstagram"
+                  />
+                  {post.media_type === "VIDEO" && (
+                    <VideoCamera
+                      size={20}
+                      weight="bold"
+                      id="videoIcon"
+                      color="#fff"
+                    />
+                  )}
                 </LinkPost>
               </Dialog.Trigger>
               <ModalInstagram idPostInstagram={post.id} />
             </Dialog.Root>
-
           );
         })}
       </ContentFeedInstagram>

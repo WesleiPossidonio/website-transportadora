@@ -22,10 +22,7 @@ export const CallAction = () => {
             entregas é agora!
           </TextRegular>
           <Button btnLarge bgColor="white">
-            <a
-              href="https://wa.me/5522999515222?text="
-              target="_blank"
-            >
+            <a href="https://wa.me/5522999515222?text=" target="_blank">
               Faça o seu Pedido!
             </a>
           </Button>

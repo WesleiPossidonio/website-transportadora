@@ -1,15 +1,15 @@
-import ReCAPTCHA from "react-google-recaptcha"
-import * as zod from 'zod'
-import AOS from 'aos'
+import ReCAPTCHA from "react-google-recaptcha";
+import * as zod from "zod";
+import AOS from "aos";
 
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import { toast } from "react-toastify"
-import { useEffect, useState } from "react"
-import { MapPinArea, Envelope, WhatsappLogo } from "@phosphor-icons/react"
-import 'aos/dist/aos.css';
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
+import { useEffect, useState } from "react";
+import { MapPinArea, Envelope, WhatsappLogo } from "@phosphor-icons/react";
+import "aos/dist/aos.css";
 
-import api from "../../Services/api"
+import api from "../../Services/api";
 import {
   ContainerContact,
   ContainerEmailAndWhatsapp,
@@ -18,25 +18,25 @@ import {
   ContentForm,
   ContentInfo,
   ContentTitle,
-  TextArea
-} from "./styled"
-import { Button, TextRegular, TitleText, Input } from ".."
+  TextArea,
+} from "./styled";
+import { Button, TextRegular, TitleText, Input } from "..";
 
 const sendEmailFormSchema = zod.object({
-  name: zod.string().min(3, 'Por gentileza, digite o seu nome'),
-  email: zod.string().email('Por gentileza, digite o seu email corretamente'),
+  name: zod.string().min(3, "Por gentileza, digite o seu nome"),
+  email: zod.string().email("Por gentileza, digite o seu email corretamente"),
   phone: zod
     .string()
-    .min(11, 'Por gentileza, digite o numero de telefone corretamente')
-    .max(11, 'Por gentileza, digite o numero sem caractere'),
-  subject_text: zod.string().min(3, 'Digite sua dúvida'),
-  subject_title: zod.string().min(3, 'Digite sua dúvida'),
-})
+    .min(11, "Por gentileza, digite o numero de telefone corretamente")
+    .max(11, "Por gentileza, digite o numero sem caractere"),
+  subject_text: zod.string().min(3, "Digite sua dúvida"),
+  subject_title: zod.string().min(3, "Digite sua dúvida"),
+});
 
-type createSendEmailFormInputs = zod.infer<typeof sendEmailFormSchema>
+type createSendEmailFormInputs = zod.infer<typeof sendEmailFormSchema>;
 
 export const Contact = () => {
-  const [captcha, setCaptcha] = useState<string | null>('')
+  const [captcha, setCaptcha] = useState<string | null>("");
 
   const {
     register,
@@ -45,19 +45,19 @@ export const Contact = () => {
     reset,
   } = useForm<createSendEmailFormInputs>({
     resolver: zodResolver(sendEmailFormSchema),
-  })
+  });
 
   useEffect(() => {
-    AOS.init()
-  }, [])
+    AOS.init();
+  }, []);
 
   const handleSendEmail = async (data: createSendEmailFormInputs) => {
-    const { email, name, phone, subject_text, subject_title } = data
+    const { email, name, phone, subject_text, subject_title } = data;
 
     if (!captcha) {
       toast.error("Captcha pendente!", {
-        position: "top-right"
-      })
+        position: "top-right",
+      });
       return;
     }
 
@@ -68,24 +68,24 @@ export const Contact = () => {
       subject_text,
       subject_title,
       captcha, // Incluindo o token reCAPTCHA
-    }
+    };
 
     try {
-      await toast.promise(api.post('sendMail', dataSendEmail), {
-        pending: 'Verificando seus dados',
-        success: 'Dúvida enviada com sucesso!',
-        error: 'Verifique seus dado e faça novamente! 🤯',
-      })
-      reset()
-      setCaptcha(null) // Resetando o captcha após o envio
+      await toast.promise(api.post("sendMail", dataSendEmail), {
+        pending: "Verificando seus dados",
+        success: "Dúvida enviada com sucesso!",
+        error: "Verifique seus dado e faça novamente! 🤯",
+      });
+      reset();
+      setCaptcha(null); // Resetando o captcha após o envio
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  };
 
   const handleCapcha = (token: string | null) => {
-    setCaptcha(token)
-  }
+    setCaptcha(token);
+  };
 
   return (
     <ContainerContact id="contact">
@@ -104,15 +104,23 @@ export const Contact = () => {
             <ContentEmailAndWhatsapp>
               <WhatsappLogo size={45} color="#fff" />
               <div>
-                <TitleText size="s" color="white">Contato</TitleText>
+                <TitleText size="s" color="white">
+                  Contato
+                </TitleText>
                 <TextRegular size="sm" color="white">
-                  <strong>Telefone Fixo:</strong>{' '}
+                  <strong>Telefone Fixo:</strong>{" "}
                   <a href="tel:+55223518-0094">(22) 3518-0094</a>
                 </TextRegular>
                 <TextRegular size="sm" color="white">
-                  <strong>Whatsapp:</strong>{' '}
-                  <a href="https://wa.me/5522997740161?text=" target="_blank">(22) 99774-0161</a> |
-                  <a href="https://wa.me/5522999852325?text=" target="_blank"> (22) 99985-2325</a>
+                  <strong>Whatsapp:</strong>{" "}
+                  <a href="https://wa.me/5522997740161?text=" target="_blank">
+                    (22) 99774-0161
+                  </a>{" "}
+                  |
+                  <a href="https://wa.me/5522999852325?text=" target="_blank">
+                    {" "}
+                    (22) 99985-2325
+                  </a>
                 </TextRegular>
               </div>
             </ContentEmailAndWhatsapp>
@@ -120,8 +128,11 @@ export const Contact = () => {
             <ContentEmailAndWhatsapp>
               <Envelope size={45} color="#fff" />
               <div>
-                <TitleText size="s" color="white">E-mail</TitleText>
-                <TextRegular size="sm" color="white"><strong>Macaé:</strong>{' '}
+                <TitleText size="s" color="white">
+                  E-mail
+                </TitleText>
+                <TextRegular size="sm" color="white">
+                  <strong>Macaé:</strong>{" "}
                   <a href="mailto:comercial@gaspartransportes.com.br">
                     comercial@gaspartransportes.com.br
                   </a>
@@ -132,56 +143,69 @@ export const Contact = () => {
             <ContentEmailAndWhatsapp>
               <MapPinArea size={45} color="#fff" />
               <div>
-                <TitleText size="s" color="white">Endereços</TitleText>
+                <TitleText size="s" color="white">
+                  Endereços
+                </TitleText>
                 <TextRegular color="white" weight={500}>
-                  <a href="#"> Avenida Lacerda Agostinho, 2000, <br /> sala 06,
-                    Botafogo, Macaé-RJ 27.947-285 </a>
+                  <a href="#">
+                    {" "}
+                    Avenida Lacerda Agostinho, 2000, <br /> sala 06, Botafogo,
+                    Macaé-RJ 27.947-285{" "}
+                  </a>
                 </TextRegular>
               </div>
             </ContentEmailAndWhatsapp>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.3003620028376!2d-41.782641725422316!3d-22.34228481793921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9631034350483d%3A0x70cb7e0d8599d035!2sGaspar%20Transportes!5e0!3m2!1spt-BR!2sbr!4v1726778973674!5m2!1spt-BR!2sbr" width="400" height="300" loading="lazy" id="Maps"></iframe>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3690.3003620028376!2d-41.782641725422316!3d-22.34228481793921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9631034350483d%3A0x70cb7e0d8599d035!2sGaspar%20Transportes!5e0!3m2!1spt-BR!2sbr!4v1726778973674!5m2!1spt-BR!2sbr"
+              width="400"
+              height="300"
+              loading="lazy"
+              id="Maps"
+            ></iframe>
           </ContainerEmailAndWhatsapp>
 
           <ContentForm onSubmit={handleSubmit(handleSendEmail)}>
             <Input
               type="text"
               placeholder="Nome"
-              {...register('name')}
+              {...register("name")}
               error={errors.name?.message}
             />
             <Input
               type="text"
               placeholder="Email"
-              {...register('email')}
+              {...register("email")}
               error={errors.email?.message}
             />
             <Input
               type="tel"
               placeholder="Telefone"
-              {...register('phone')}
+              {...register("phone")}
               error={errors.phone?.message}
             />
             <Input
               type="text"
               placeholder="Assunto"
-              {...register('subject_title')}
+              {...register("subject_title")}
               error={errors.subject_title?.message}
             />
             <TextArea
               placeholder="Digite sua dúvida...."
-              {...register('subject_text')}
+              {...register("subject_text")}
               error={errors.subject_text?.message}
             />
-            <div id='reCaptcha'>
+            <div id="reCaptcha">
               <ReCAPTCHA
                 sitekey={import.meta.env.VITE_RECAPTCHA_KEY}
                 onChange={handleCapcha}
               />
             </div>
-            <Button bgColor="white" btnLarge={false}>Enviar</Button>
+            <Button bgColor="white" btnLarge={false}>
+              Enviar
+            </Button>
           </ContentForm>
         </ContentInfo>
       </ContentContact>
     </ContainerContact>
-  )
-}
+  );
+};

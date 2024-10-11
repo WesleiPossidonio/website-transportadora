@@ -1,21 +1,30 @@
-import * as Dialog from '@radix-ui/react-dialog'
-import { InstagramLogo, X } from '@phosphor-icons/react'
+import * as Dialog from "@radix-ui/react-dialog";
+import { InstagramLogo, X } from "@phosphor-icons/react";
 import { format } from "date-fns";
-import { ptBR } from 'date-fns/locale';
+import { ptBR } from "date-fns/locale";
 
-import { useDataCompany } from '../../context/CompanyContext'
-import { TextRegular, TitleText } from '../typografy'
-import { CloseButton, ContentTextHeader, ContentModal, ContentText, HeaderContainer, Overlay, LinkMedia } from './styled'
+import { useDataCompany } from "../../context/CompanyContext";
+import { TextRegular, TitleText } from "../typografy";
+import {
+  CloseButton,
+  ContentTextHeader,
+  ContentModal,
+  ContentText,
+  HeaderContainer,
+  Overlay,
+  LinkMedia,
+} from "./styled";
 
 interface ModalVideoProps {
-  idPostInstagram: string
+  idPostInstagram: string;
 }
 
 export const ModalInstagram = ({ idPostInstagram }: ModalVideoProps) => {
+  const { feedInstagramData } = useDataCompany();
 
-  const { feedInstagramData } = useDataCompany()
-
-  const filteredFeedInstgram = feedInstagramData.find(post => post.id === idPostInstagram)
+  const filteredFeedInstgram = feedInstagramData.find(
+    (post) => post.id === idPostInstagram
+  );
   return (
     <Dialog.Portal>
       <Overlay />
@@ -23,35 +32,41 @@ export const ModalInstagram = ({ idPostInstagram }: ModalVideoProps) => {
         <CloseButton>
           <X size={24} weight="bold" />
         </CloseButton>
-        {
-          filteredFeedInstgram?.media_type !== "IMAGE" ?
-            <LinkMedia href={filteredFeedInstgram?.permalink} target='_blank'>
-              <video controls controlsList="nodownload">
-                <source src={filteredFeedInstgram?.media_url} type='video/mp4' />
-              </video>
-            </LinkMedia> :
-            <LinkMedia href={filteredFeedInstgram?.permalink} target='_blank'>
-              <img src={filteredFeedInstgram.media_url} alt="" />
-            </LinkMedia>
-
-        }
+        {filteredFeedInstgram?.media_type !== "IMAGE" ? (
+          <LinkMedia href={filteredFeedInstgram?.permalink} target="_blank">
+            <video controls controlsList="nodownload">
+              <source src={filteredFeedInstgram?.media_url} type="video/mp4" />
+            </video>
+          </LinkMedia>
+        ) : (
+          <LinkMedia href={filteredFeedInstgram?.permalink} target="_blank">
+            <img src={filteredFeedInstgram.media_url} alt="" />
+          </LinkMedia>
+        )}
         <ContentText>
           <HeaderContainer>
             <ContentTextHeader>
-              <TitleText size='s' color='text'>{filteredFeedInstgram?.username}</TitleText>
-              <TextRegular size='sm'>
+              <TitleText size="s" color="text">
+                {filteredFeedInstgram?.username}
+              </TitleText>
+              <TextRegular size="sm">
                 {filteredFeedInstgram?.timestamp
-                  ? format(new Date(filteredFeedInstgram.timestamp), "dd MMMM yyyy", { locale: ptBR })
+                  ? format(
+                      new Date(filteredFeedInstgram.timestamp),
+                      "dd MMMM yyyy",
+                      { locale: ptBR }
+                    )
                   : "Data indisponível"}
               </TextRegular>
             </ContentTextHeader>
 
             <InstagramLogo size={30} color="#000" id="logoInstagram" />
           </HeaderContainer>
-          <TextRegular size='sm' weight={500}>{filteredFeedInstgram?.caption}</TextRegular>
+          <TextRegular size="sm" weight={500}>
+            {filteredFeedInstgram?.caption}
+          </TextRegular>
         </ContentText>
       </ContentModal>
     </Dialog.Portal>
-  )
-}
-
+  );
+};

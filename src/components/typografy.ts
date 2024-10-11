@@ -1,32 +1,32 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 interface RegularTextProps {
-  size?: 'sm' | 'm' | 's' | 'l'
-  color?: 'text' | 'white' | 'red' | 'bg'
-  weight?: string | number
+  size?: "sm" | "m" | "s" | "l";
+  color?: "text" | "white" | "red" | "bg";
+  weight?: string | number;
 }
 
 interface TitleTextProps {
-  size?: 'm' | 's' | 'l' | 'xl' | 'xll' | 'hero'
-  color?: 'text' | 'white' | 'secundary-bg' | 'bg'
-  weight?: string | number
+  size?: "m" | "s" | "l" | "xl" | "xll" | "hero";
+  color?: "text" | "white" | "secundary-bg" | "bg";
+  weight?: string | number;
 }
 
 export const TextRegular = styled.p<RegularTextProps>`
-  color: ${({ theme, color }) => theme.colors[`base-${color ?? 'text'}`]};
+  color: ${({ theme, color }) => theme.colors[`base-${color ?? "text"}`]};
   font-size: ${({ theme, size }) =>
-    theme.FontSizes[`text-regular-${size ?? 's'}`]};
+    theme.FontSizes[`text-regular-${size ?? "s"}`]};
   line-height: 150%;
   font-weight: ${({ weight }) => weight ?? 400};
 
   a {
-    color: ${({ theme, color }) => theme.colors[`base-${color ?? 'text'}`]};
+    color: ${({ theme, color }) => theme.colors[`base-${color ?? "text"}`]};
   }
-`
+`;
 export const TitleText = styled.h1<TitleTextProps>`
-  color: ${({ theme, color }) => theme.colors[`base-${color ?? 'text'}`]};
+  color: ${({ theme, color }) => theme.colors[`base-${color ?? "text"}`]};
   font-size: ${({ theme, size }) =>
-    theme.FontSizes[`title-regular-${size ?? 'm'}`]};
+    theme.FontSizes[`title-regular-${size ?? "m"}`]};
   line-height: 108%;
   font-weight: ${({ weight }) => weight ?? 700};
-`
+`;

@@ -55,12 +55,12 @@ export const ContentText = styled.div`
 
     p,
     h1 {
-    max-width: 100%;
-  }
+      max-width: 100%;
+    }
 
-  p {
-    margin-bottom: 0.5rem;
-  }
+    p {
+      margin-bottom: 0.5rem;
+    }
   }
 `;
 

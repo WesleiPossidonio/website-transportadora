@@ -20,42 +20,42 @@ export const ContainerSectionServices = styled.section`
     margin: 4.125rem;
   }
 
-  .swiper-wrapper{
+  .swiper-wrapper {
     height: 90%;
   }
 
   @media (max-width: 768px) {
-   flex-direction: column;
+    flex-direction: column;
 
-   .mySwiper {
-    width: 100%;
-  }
+    .mySwiper {
+      width: 100%;
+    }
   }
 `;
 
 export const Header = styled.div`
-width: 30%;
-position: relative;
+  width: 30%;
+  position: relative;
 
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-justify-content: flex-start;
-gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
 
-button {
-  margin-top: 0.8rem;
-}
-
-@media (max-width: 768px) {
-  width: 100%;
-   align-self: flex-start;
-}
-
-@media (max-width: 726px) {
-   width: 100%;
+  button {
+    margin-top: 0.8rem;
   }
-`
+
+  @media (max-width: 768px) {
+    width: 100%;
+    align-self: flex-start;
+  }
+
+  @media (max-width: 726px) {
+    width: 100%;
+  }
+`;
 
 export const CardSwiper = styled(SwiperSlide)`
   text-align: center;
@@ -75,21 +75,22 @@ export const CardSwiper = styled(SwiperSlide)`
 
   transition: 0.2s ease-in;
 
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   background: ${({ theme }) => theme.colors["base-white"]};
-
 
   &:hover {
     background-color: ${({ theme }) => theme.colors["base-secundary-bg"]};
 
-    p, h1 {
-      color: ${({ theme }) => theme.colors["base-white"]}
+    p,
+    h1 {
+      color: ${({ theme }) => theme.colors["base-white"]};
     }
   }
 
   @media (max-width: 768px) {
-  width: 100%;
-}
+    width: 100%;
+  }
 `;
 
 export const Icon = styled.img`
@@ -98,17 +99,17 @@ export const Icon = styled.img`
 `;
 
 export const ContentTextCard = styled.div`
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-justify-content: center;
-gap: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0.8rem;
 
-margin-top: 1.1rem;
+  margin-top: 1.1rem;
 
-a {
-  font-weight: 500;
-  color: ${({ theme }) => theme.colors["base-bg"]};
-  margin-top: -0.2rem;
-}
-`
+  a {
+    font-weight: 500;
+    color: ${({ theme }) => theme.colors["base-bg"]};
+    margin-top: -0.2rem;
+  }
+`;

@@ -161,7 +161,11 @@ export const ContainerTextAbout = styled.div`
     margin-top: 1rem;
   }
 
-  @media (max-width: 767px) {
+  #title {
+    font-size: min(2.6rem, 6.5vw);
+  }
+
+  @media (max-width: 768px) {
     width: 100%;
 
     p,
