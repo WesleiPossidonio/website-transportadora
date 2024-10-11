@@ -3,7 +3,7 @@ name: Deploy via ftp
 on: 
   push:
     branches:
-      - main  # Alterar para o branch correto se necessário
+      - master  # Alterar para o branch correto se necessário
 
 jobs:
   deploy:
