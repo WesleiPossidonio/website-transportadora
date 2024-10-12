@@ -9,20 +9,22 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
+    env:  # Definindo a variável de ambiente globalmente para o job
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE20: true
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Use Node.js 20
-        uses: actions/setup-node@v3  # Adicione a chave `uses`
+        uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: '20' # Especifica a versão do Node.js
 
       - name: Install dependencies
-        run: yarn install  # ou npm install, dependendo do seu gerenciador de pacotes
+        run: yarn install # ou npm install, dependendo do seu gerenciador de pacotes
 
       - name: Build project
-        run: yarn build  # ou npm run build, dependendo do seu gerenciador de pacotes
+        run: yarn build # ou npm run build, dependendo do seu gerenciador de pacotes
 
       - name: FTP Deploy Locaweb
         uses: locaweb/ftp-deploy@1.0.0
