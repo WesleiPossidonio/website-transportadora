@@ -1,35 +1,16 @@
-name: Deploy via FTP
-
-on: 
-  push:
-    branches:
-      - master
-
+name: Deploy via ftp
+on: push
 jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
-    env:  # Definindo a variável de ambiente globalmente para o job
-      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+    - uses: actions/checkout@v4
 
-      - name: Use Node.js 20
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20' # Especifica a versão do Node.js
-
-      - name: Install dependencies
-        run: yarn install # ou npm install, dependendo do seu gerenciador de pacotes
-
-      - name: Build project
-        run: yarn build # ou npm run build, dependendo do seu gerenciador de pacotes
-
-      - name: FTP Deploy Locaweb
-        uses: locaweb/ftp-deploy@2.0.0
-        with:
-          host: ${{ secrets.HOST }} 
-          user: ${{ secrets.USER }}
-          password: ${{ secrets.PASS }}
-          localDir: "dist"
+    - name: FTP Deploy Locaweb
+      uses: locaweb/ftp-deploy@1.0.0
+      with:
+        host: ${{ secrets.HOST }} 
+        user: ${{ secrets.USER }}
+        password: ${{ secrets.PASS }}
+        localDir: "dist"
