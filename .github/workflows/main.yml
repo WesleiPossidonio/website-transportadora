@@ -1,16 +1,31 @@
-name: Deploy via ftp
-on: push
+name: Deploy via FTP
+
+on: 
+  push:
+    branches:
+      - master
+
 jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: FTP Deploy Locaweb
-      uses: locaweb/ftp-deploy@1.0.0
-      with:
-        host: ${{ secrets.HOST }} 
-        user: ${{ secrets.USER }}
-        password: ${{ secrets.PASS }}
-        localDir: "dist" # teste
+      - name: Install dependencies
+        run: yarn install  # ou npm install
+
+      - name: Build project
+        run: yarn build  # ou npm run build
+
+      - name: Check dist directory
+        run: ls -la dist  # Verifica se a pasta dist foi criada corretamente
+
+      - name: FTP Deploy Locaweb
+        uses: locaweb/ftp-deploy@1.0.0
+        with:
+          host: ${{ secrets.HOST }} 
+          user: ${{ secrets.USER }}
+          password: ${{ secrets.PASS }}
+          localDir: "dist"  # Agora está correto
