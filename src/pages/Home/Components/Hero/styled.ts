@@ -66,6 +66,6 @@ export const ContentText = styled.div`
   }
 
   @media (max-width: 600px) {
-    top: 12rem;
+    top: 30%;
   }
 `;

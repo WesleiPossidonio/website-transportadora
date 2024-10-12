@@ -30,6 +30,9 @@ export const ContainerSectionServices = styled.section`
     .mySwiper {
       width: 100%;
     }
+
+    margin-top: 2rem;
+    padding: 3rem 2rem 0 2rem;
   }
 
   @media (min-width: 2480px) {

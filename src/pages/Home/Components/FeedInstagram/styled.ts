@@ -38,7 +38,7 @@ export const ContainerTitle = styled.div`
 export const ContentFeedInstagram = styled.div`
   max-width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(14.625rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(13.625rem, 1fr));
   gap: 1.5rem;
 
   margin: 0 auto;
@@ -72,8 +72,8 @@ export const LinkPost = styled.div`
 
   img,
   video {
-    width: 15rem;
-    height: 15rem;
+    width: 13rem;
+    height: 13rem;
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
