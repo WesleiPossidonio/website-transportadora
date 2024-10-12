@@ -64,4 +64,8 @@ export const ContentText = styled.div`
     left: 0;
     padding: 2rem;
   }
+
+  @media (max-width: 600px) {
+    top: 12rem;
+  }
 `;

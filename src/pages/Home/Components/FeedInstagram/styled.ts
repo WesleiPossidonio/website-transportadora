@@ -23,6 +23,7 @@ export const ContainerTitle = styled.div`
   align-items: center;
   justify-content: center;
   gap: 0.3rem;
+  margin-top: 1.5rem;
 
   // Estilização Title
   span {
@@ -41,7 +42,7 @@ export const ContentFeedInstagram = styled.div`
   gap: 1.5rem;
 
   margin: 0 auto;
-  padding: 3rem;
+  padding: 2rem 3rem;
   cursor: pointer;
 
   @media (min-width: 1024px) {

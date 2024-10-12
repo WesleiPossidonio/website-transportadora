@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ContainerAdvantages = styled.section`
   width: 100%;
   max-width: 112.5rem;
-  height: 45rem;
+  height: 40rem;
 
   display: flex;
   align-items: center;
@@ -173,8 +173,8 @@ export const ImgOne = styled.img`
     margin: -3rem -1.6rem -1.6rem -1.6rem;
   }
 
-  @media (max-width: 405px) {
-    margin: -2.2rem -1.6rem -1.6rem -1.6rem;
+  @media (max-width: 475px) {
+    margin: -1.6rem -1.6rem -1.6rem -1.6rem;
   }
 `;
 

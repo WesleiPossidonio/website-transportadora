@@ -31,6 +31,10 @@ export const ContainerSectionServices = styled.section`
       width: 100%;
     }
   }
+
+  @media (min-width: 2480px) {
+    padding: 2rem 27rem;
+  }
 `;
 
 export const Header = styled.div`
