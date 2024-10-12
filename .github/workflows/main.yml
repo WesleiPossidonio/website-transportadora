@@ -10,7 +10,7 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     env:  # Definindo a variável de ambiente globalmente para o job
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE20: true
+      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
