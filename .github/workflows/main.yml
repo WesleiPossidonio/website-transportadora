@@ -40,3 +40,5 @@ jobs:
           user: ${{ secrets.USER }}
           password: ${{ secrets.PASS }}
           localDir: "dist"
+          forceSsl: true  # Altere para false se não estiver usando SSL
+          remoteDir: "public_html"  # Certifique-se de que isso esteja correto
