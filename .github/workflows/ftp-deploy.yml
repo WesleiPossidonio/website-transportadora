@@ -10,7 +10,7 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE20: true
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE20: true   #teste force node version 20
 
     steps:
     - uses: actions/checkout@v3
