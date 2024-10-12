@@ -11,10 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
       - name: Use Node.js 20
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v2
         with:
           node-version: '20'
 
@@ -40,5 +40,3 @@ jobs:
           user: ${{ secrets.USER }}
           password: ${{ secrets.PASS }}
           localDir: "dist"
-          forceSsl: true  # Altere para false se não estiver usando SSL
-          remoteDir: "public_html"  # Certifique-se de que isso esteja correto
