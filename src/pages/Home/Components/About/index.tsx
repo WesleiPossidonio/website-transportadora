@@ -37,7 +37,7 @@ export const About = () => {
           <strong>
             Com anos de experiência, somos especialistas em oferecer as soluções
             logísticas ideais
-          </strong>
+          </strong>{' '}
           para que suas entregas sejam ágeis e seguras.
           <strong>
             Confiança, qualidade e dedicação estão no centro de tudo o que
@@ -49,7 +49,7 @@ export const About = () => {
           Cuidamos de cada detalhe.
           <strong>
             Desde o atendimento personalizado até a entrega pontual
-          </strong>
+          </strong>{' '}
           estamos sempre ao seu lado, garantindo que
           <strong>
             suas expectativas sejam superadas em cada etapa do transporte.
