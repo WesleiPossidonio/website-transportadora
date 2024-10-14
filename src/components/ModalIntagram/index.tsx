@@ -46,9 +46,11 @@ export const ModalInstagram = ({ idPostInstagram }: ModalVideoProps) => {
         <ContentText>
           <HeaderContainer>
             <ContentTextHeader>
-              <TitleText size="s" color="text">
-                {filteredFeedInstgram?.username}
-              </TitleText>
+              <LinkMedia href={filteredFeedInstgram?.permalink} target="_blank">
+                <TitleText size="s" color="text">
+                  {filteredFeedInstgram?.username}
+                </TitleText>
+              </LinkMedia>
               <TextRegular size="sm">
                 {filteredFeedInstgram?.timestamp
                   ? format(
