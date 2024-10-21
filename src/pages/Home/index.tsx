@@ -1,4 +1,4 @@
-import { Contact } from "../../components";
+import { Contact, ModalPrivacyPolicy } from "../../components";
 import {
   About,
   Advantages,
@@ -13,6 +13,7 @@ import { ContainerPage } from "./styled";
 export const Home = () => {
   return (
     <ContainerPage>
+      <ModalPrivacyPolicy />
       <BannerMain />
       <About />
       <SectionServices />

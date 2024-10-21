@@ -7,7 +7,7 @@ interface ButtonProps {
   bgColor: "bg" | "white";
 }
 
-export const Button = ({ children, btnLarge, bgColor }: ButtonProps) => {
+export const Button = ({ children, btnLarge, bgColor, }: ButtonProps) => {
   return (
     <ContainerButton btnLarge={btnLarge} bgColor={bgColor}>
       {children}
