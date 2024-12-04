@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ContainerContact = styled.section`
   width: 100%;
   max-width: 112.5rem;
-  height: max-content;
+  height: auto;
 
   margin: 0 auto;
   padding: 6rem 4rem;
@@ -14,7 +14,7 @@ export const ContainerContact = styled.section`
   background-color: ${({ theme }) => theme.colors["base-white-100"]};
 
   @media (max-width: 667px) {
-    height: max-content;
+    height: auto;
     padding: 1.5rem;
     text-align: center;
   }

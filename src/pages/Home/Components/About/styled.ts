@@ -14,7 +14,7 @@ export const ContainerAbout = styled.section`
   margin: 0 auto;
 
   @media (max-width: 767px) {
-    height: max-content;
+    height: auto;
     flex-direction: column;
     justify-content: center;
     gap: 5rem;

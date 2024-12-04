@@ -14,7 +14,7 @@ export const ContainerAdvantages = styled.section`
   padding: 2rem 4rem;
 
   @media (max-width: 696px) {
-    height: max-content;
+    height: auto;
     flex-wrap: wrap;
     gap: 9rem;
     margin-bottom: 7rem 0;

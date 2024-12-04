@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ContainerFeedInstagram = styled.section`
   width: 100%;
   max-width: 112.5rem;
-  height: max-content;
+  height: auto;
 
   display: flex;
   flex-direction: column;

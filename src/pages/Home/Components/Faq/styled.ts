@@ -5,7 +5,7 @@ import { styled as muiStyled } from "@mui/material/styles";
 export const ContainerFaq = styled.section`
   width: 100%;
   max-width: 112.5rem;
-  height: max-content;
+  height: auto;
 
   display: flex;
   flex-direction: column;
@@ -17,7 +17,6 @@ export const ContainerFaq = styled.section`
   padding: 3rem 4rem;
 
   @media (max-width: 726px) {
-    height: max-content;
     padding: 4rem 1.5rem;
     gap: 3rem;
   }

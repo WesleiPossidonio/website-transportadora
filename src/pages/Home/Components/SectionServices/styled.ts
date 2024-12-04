@@ -3,7 +3,7 @@ import { SwiperSlide } from "swiper/react";
 
 export const ContainerSectionServices = styled.section`
   width: 100%;
-  min-height: max-content;
+  min-height: auto;
 
   display: flex;
   align-items: center;

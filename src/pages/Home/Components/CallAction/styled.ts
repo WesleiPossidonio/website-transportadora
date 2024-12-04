@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ContainerCallAction = styled.section`
   width: 100%;
   max-width: 112.5rem;
-  height: max-content;
+  min-height: auto;
 
   display: flex;
   align-items: center;
@@ -14,12 +14,10 @@ export const ContainerCallAction = styled.section`
   padding: 0 3rem;
 
   @media (max-width: 768px) {
-    height: max-content;
     margin-top: 3rem;
   }
 
   @media (max-width: 600px) {
-    height: max-content;
     margin-top: 9rem;
   }
 `;
